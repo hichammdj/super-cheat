@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color Selector</title>
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			margin: 10px;
+			display: none;
+		}
+		#red {
+			background-color: red;
+		}
+		#blue {
+			background-color: blue;
+		}
+		#green {
+			background-color: green;
+		}
+		#yellow {
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div id="red"></div>
+	<div id="blue"></div>
+	<div id="green"></div>
+	<div id="yellow"></div>
+	
+	<script>
+		const redDiv = document.getElementById("red");
+		const blueDiv = document.getElementById("blue");
+		const greenDiv = document.getElementById("green");
+		const yellowDiv = document.getElementById("yellow");
+		
+		redDiv.addEventListener("click", function() {
+			blueDiv.style.display = "block";
+			greenDiv.style.display = "block";
+			yellowDiv.style.display = "block";
+		});
+		
+		blueDiv.addEventListener("click", function() {
+			redDiv.style.display = "block";
+			greenDiv.style.display = "block";
+			yellowDiv.style.display = "block";
+		});
+		
+		greenDiv.addEventListener("click", function() {
+			redDiv.style.display = "block";
+			blueDiv.style.display = "block";
+			yellowDiv.style.display = "block";
+		});
+		
+		yellowDiv.addEventListener("click", function() {
+			redDiv.style.display = "block";
+			blueDiv.style.display = "block";
+			greenDiv.style.display = "block";
+		});
+	</script>
+</body>
+</html>
